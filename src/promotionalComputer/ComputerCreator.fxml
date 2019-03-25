@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="promotionalComputer.ComputerCreatorController">
+   <children>
+      <HBox layoutX="41.0" layoutY="96.0" prefHeight="367.0" prefWidth="401.0">
+         <children>
+            <GridPane prefHeight="392.0" prefWidth="439.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="271.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Stock :" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Price :" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date :" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idTextField" prefWidth="211.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="stockTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="priceTextField" prefHeight="30.0" prefWidth="232.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="productDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Brand ：" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Touch Screen：" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="trueRadioBtn" mnemonicParsing="false" onAction="#setTrue" text="True" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="falseRadioBtn" mnemonicParsing="false" onAction="#setFalse" text="False" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <ComboBox fx:id="brandChioceBox" onAction="#brandChanger" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="83.0" prefHeight="80.0" prefWidth="625.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="48.0" prefWidth="625.0" text="Computer Promotion： Save Money Everyday !" textFill="#b52214">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="76.0" layoutY="484.0" prefHeight="92.0" prefWidth="637.0">
+         <children>
+            <Label fx:id="sumMsgLabel" text="Label" textFill="#2c51e8">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="eroMsgLabel" text="Label" textFill="#e40f0f">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="480.0" layoutY="97.0" prefHeight="215.0" prefWidth="259.0">
+         <children>
+            <ImageView fx:id="brandImageView" fitHeight="221.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="touchScreenImageView" fitHeight="64.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <Button fx:id="getPriceBtn" layoutX="480.0" layoutY="415.0" mnemonicParsing="false" onAction="#getPriceBtnPushed" text="GET THE PRICE NOW!" textFill="#ae0f0f">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
